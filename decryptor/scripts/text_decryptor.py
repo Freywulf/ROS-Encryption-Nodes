@@ -11,7 +11,7 @@ from cryptography.hazmat.primitives import serialization
 
 private_key = ec.generate_private_key(ec.SECP384R1(), default_backend())
 pub = rospy.Publisher('newPlain', String, queue_size=1)
-pub2 = rospy.Publisher('exsent',String,queue_size=1)
+pub2 = rospy.Publisher('publickey',String,queue_size=1)
 message = ""
 
 
@@ -70,7 +70,7 @@ def talker(message):
 def listener():
 
     rospy.init_node('text_decryptor', anonymous=True)
-    rospy.Subscriber('exrequest', String, exchange) #Subscribes to /exrequest topic that recieves requests for public keys
+    rospy.Subscriber('request', String, exchange) #Subscribes to /exrequest topic that recieves requests for public keys
     rospy.Subscriber('encrypted', String, talker) #Subsribes to /encrypted topic that recieves encrypted messages from sender                                                          
     rospy.spin() #keeps python from exiting until this node is stopped
 
