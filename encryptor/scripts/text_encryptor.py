@@ -15,7 +15,7 @@ from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 
 
 pub = rospy.Publisher('encrypted', String, queue_size=1)
-exchannel = rospy.Publisher('exrequest', String, queue_size=1)
+exchannel = rospy.Publisher('request', String, queue_size=1)
 
 message = "" #Will be assigned to plaintext message from /plaintext
 key = "" #Will be assigned to the public key of the peer
@@ -63,7 +63,7 @@ def talker(data):
 def listener():
      
    rospy.init_node('text_encryptor', anonymous=True)
-   rospy.Subscriber('exsent',String, key_exchange_listener)
+   rospy.Subscriber('publickey',String, key_exchange_listener)
    rospy.Subscriber('plaintext', String, talker)
    rospy.spin()
 
