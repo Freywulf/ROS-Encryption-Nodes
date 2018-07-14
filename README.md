@@ -12,10 +12,10 @@ Figure Two: Outline of ECDH Implementaion
 ## Running the Nodes
 Follow the instructions [here](http://wiki.ros.org/ROS/Tutorials/CreatingPackage) to build the package for these scripts. After doing so running them is easy. Simply boot up your master node and depending on script you are running begin running either freenect , usb_cam or whatever text-based data you wish (you may use talkerplain.py if you wish to run text_encryptor.py with dummy data). After launch both the encryptor node(whether it by text_encryptor, depth_encryptor etc.) and decryptor node using the rosrun command and it should work. Below are examples of output from running talkerplain.py, text_encryptor.py and text_decryptor.py. 
 
-Figure Three: Output of /plaintext Topic
-![Key Exchange Outline](https://github.com/Freywulf/ROS-Encryption-Nodes/blob/master/images/plaintext.png)
-Figure Four: Output of /encrypted Topic
-![Key Exchange Outline](https://github.com/Freywulf/ROS-Encryption-Nodes/blob/master/images/encryptedTerminal.png)
-Figure Five: Output of /newPlain Topic
-![Key Exchange Outline](https://github.com/Freywulf/ROS-Encryption-Nodes/blob/master/images/newPlain.png)
+Figure Three: Output of /plaintext Topic <br />
+![Key Exchange Outline](https://github.com/Freywulf/ROS-Encryption-Nodes/blob/master/images/plaintext.png) <br />
+Figure Four: Output of /encrypted Topic <br />
+![Key Exchange Outline](https://github.com/Freywulf/ROS-Encryption-Nodes/blob/master/images/encryptedTerminal.png) <br />
+Figure Five: Output of /newPlain Topic <br />
+![Key Exchange Outline](https://github.com/Freywulf/ROS-Encryption-Nodes/blob/master/images/newPlain.png)<br />
 
